@@ -1,0 +1,6 @@
+@mixin notebook {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+  

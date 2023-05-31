@@ -1,0 +1,14 @@
+$font-base:  'Inter', sans-serif;
+
+* {
+    box-sizing: border-box;    
+  }
+
+html {
+    font-family: $font-base;
+}
+
+a {
+    text-decoration: none;
+  }
+  

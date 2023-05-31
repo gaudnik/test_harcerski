@@ -1,0 +1,64 @@
+.menu {
+    &__btn {
+      display: none;
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+      opacity: 0;
+      
+      &:checked {
+        & ~ .menu__nav {
+          display: flex;
+          flex-direction: column;
+          float: left;
+          align-items: center;
+          width: 40%;
+          position: absolute;
+          margin-top: 4rem;
+          background-color: $dark_gray;
+          
+          .menu__element {
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+            width: 100%;
+            text-align: center;
+            font-weight: 700; 
+            font-size: 1.5rem;
+            a {
+              color: $primary-color;
+            }
+            
+            a:active {
+              color: $light_gray;
+            }
+          }
+        }
+      }
+    }
+  
+    &__toggle {
+      display: block;
+      float: left;
+      margin: 1.25rem;
+  
+      span {
+        width: 1.35rem;
+        height: 2px;
+        display: block;
+        margin-bottom: 0.525rem;
+        background-color: $dark_gray;
+        transition: .3s all ease-in-out;
+        align-items: end;
+        border-radius: 2px;
+  
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  
+  .menu__nav {
+    display: none;
+  }
+  

@@ -1,0 +1,57 @@
+.header {
+    padding: 0.625;
+    font-size: 0.938rem;
+    border-bottom: 1px solid $dark_gray;
+  
+  
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &__logo {
+    h1 {
+      margin: 1.25rem;
+      font-size: 1.5rem;
+      color: $dark_gray
+    }
+  }
+  
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+  
+  &__global-icon {
+    background-image: url("../../Images/global_icon.png");
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    /* Dodatkowe style dla ikony */
+  }
+  
+  h2 {
+    margin: 0 5px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  &__arrow {
+    background-image: url("../../Images/arrow_icon.png");
+    background-repeat: no-repeat;
+    // background-size: cover;
+    width: 0.746rem;
+    height: 0.555rem;
+  }
+  
+  .header__account {
+    width: 30px;
+    height: 30px;
+    /* Dodatkowe style dla konta */
+  }
+  
+//   .header__menu {
+//     /* Dodatkowe style dla menu */
+//   }
+}
