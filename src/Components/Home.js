@@ -12,9 +12,11 @@ const Home = () => {
                         <br/>
                     niż widzą to inni harcerze</p>
                 <Link to="/wykonajtest">
-                    <button>Zrób test harcerski
+                    <button className="btn home__btn">
+                        <span className="home__btn_txt_first">Zrób test harcerski</span>
                         <br/>
-                        Zobacz jak oceniają cię innni
+                        <span className="home__btn_txt_second">Zobacz jak oceniają cię innni</span>
+                        <div className="home__arrow_icon"></div>
                     </button>
                 </Link>
             </div>

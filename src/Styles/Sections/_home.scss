@@ -20,4 +20,26 @@
     margin-top: 3.75rem;
     }
    }
+   &__arrow_icon {
+    background-image: url("../../Images/right_arrow.png");
+    background-size: cover;
+    width: 1rem;
+    height: 1rem;
+    float: right;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+   }
+   &__btn {
+    width: 100%;
+    margin-top: 31.438rem;
+   }
+   &__btn_txt_first{
+    font-size: 1.125rem;
+    font-weight: 400;
+    padding-bottom: 2rem;
+   }
+   &__btn_txt_second {
+    font-size: 1.4rem;
+    margin-left: 1rem;
+   }
 }
