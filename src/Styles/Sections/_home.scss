@@ -1,0 +1,23 @@
+.home {
+    display: block;
+    &__description{
+        margin: 1.188rem;
+        @include notebook {
+            margin: 3.75rem 13.875rem;
+        }
+    }
+    &__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.625rem;
+    
+   }
+   &__text {
+    font-size: 1rem;
+    line-height: 1.625rem;
+    margin-top: 1rem;
+    @include notebook{
+    margin-top: 3.75rem;
+    }
+   }
+}
