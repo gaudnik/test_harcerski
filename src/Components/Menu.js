@@ -23,6 +23,7 @@ const Menu = () => {
         <span></span>
       </label>
       <ul className={`menu__nav ${isMenuOpen ? "open" : ""}`}>
+        <h2>MENU</h2>
         <li className="menu__element">
           <Link
             to="/jaktodziala"

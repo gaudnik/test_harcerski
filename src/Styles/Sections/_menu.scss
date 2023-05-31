@@ -10,20 +10,38 @@
         & ~ .menu__nav {
           display: flex;
           flex-direction: column;
-          float: left;
           align-items: center;
-          width: 40%;
+          width: 100%;
           position: absolute;
-          margin-top: 4rem;
-          background-color: $dark_gray;
+          height: 100vh;
+          left: 70%;
+          transform: translateX(-70%);
+          background-color: $color_white;
+         
+          @include notebook {
+            transform: none;
+            border: 1px solid $primary-color;
+            width: 25%;
+            transform: translateX(-10%);
+
+            height: auto;
+          }
+          h2{
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: $color_black;
+            margin-top: 3.75rem;
+            margin-bottom: 2rem;
+
+          }
           
           .menu__element {
-            padding-bottom: 1rem;
-            padding-top: 1rem;
+            margin-bottom: 2rem;
             width: 100%;
-            text-align: center;
-            font-weight: 700; 
-            font-size: 1.5rem;
+            text-align:left;
+            font-weight: 500; 
+            font-size: 1rem;
+            padding-left: 1.875rem;
             a {
               color: $primary-color;
             }
@@ -40,6 +58,7 @@
       display: block;
       float: left;
       margin: 1.25rem;
+
   
       span {
         width: 1.35rem;
@@ -48,7 +67,7 @@
         margin-bottom: 0.525rem;
         background-color: $dark_gray;
         transition: .3s all ease-in-out;
-        align-items: end;
+        align-items: start;
         border-radius: 2px;
   
         &:last-child {

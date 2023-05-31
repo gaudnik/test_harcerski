@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Menu from "./Menu";
 
 const Header = () => {
@@ -6,7 +7,7 @@ const Header = () => {
         <div className="header">
             <div className="header__container">
                 <div className="header__logo">
-                    <h1>TestHarcerski</h1>
+                    <Link to="/" className="header__logo_text">TestHarcerski</Link>
                 </div>
                 <div className="header__right">
                     <div className="header__global-icon"></div>
