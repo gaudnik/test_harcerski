@@ -11,7 +11,15 @@ const Home = () => {
                     zupełnie inaczej, 
                         <br/>
                     niż widzą to inni harcerze</p>
-                <Link to="/wykonajtest">
+            </div>
+            <div className="home__img_board">
+                <div className="home__background"></div>
+                <div className="home__img_first"></div>
+                <div className="home__img_second"></div>
+                <div className="home__img_third"></div>
+                <div className="home__img_fourth"></div>
+            </div>
+            <Link to="/wykonajtest">
                     <button className="btn home__btn">
                         <span className="home__btn_txt_first">Zrób test harcerski</span>
                         <br/>
@@ -19,14 +27,6 @@ const Home = () => {
                         <div className="home__arrow_icon"></div>
                     </button>
                 </Link>
-            </div>
-            <div className="home__img_board">
-                <div className="home_img_first"></div>
-                <div className="home_img_second"></div>
-                <div className="home_img_third"></div>
-                <div className="home_img_fourth"></div>
-                <div className="home__background"></div>
-            </div>
         </div>
     )
 }
