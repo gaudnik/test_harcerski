@@ -1,23 +1,39 @@
 .home {
     display: block;
+    @include notebook{
+        display: flex;
+    }
     &__description{
         margin: 1.188rem;
         @include notebook {
-            margin: 3.75rem 13.875rem;
+            margin-left: 13.875rem;
+            margin-top: 3.75rem;
+            width: 40%;
         }
     }
     &__title {
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.625rem;
+    @include notebook {
+        font-size: 2.125rem;
+    }
     
    }
    &__text {
+    width: 60%;
     font-size: 1rem;
     line-height: 1.625rem;
     margin-top: 1rem;
     @include notebook{
+        width: 100%;
     margin-top: 3.75rem;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+
     }
    }
    &__arrow_icon {
@@ -31,7 +47,9 @@
    }
    &__btn {
     width: 100%;
-    // margin-top: 2rem;
+    @include notebook{
+        width: 24.75;
+    }
    }
    &__btn_txt_first{
     font-size: 1.125rem;
@@ -46,39 +64,76 @@
    &__img_board {
     width: 100%;
     height: auto;
+    @include notebook {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+    }
    }
+
    &__background {
     background-image: url("../../Images/background_home.png");
     background-size: cover;
     width: 21rem;
     height: 27rem;
     margin-left: 3.5rem;
+    @include notebook{
+        margin-right: 10rem;
+        width: 30rem;
+        height: 40.313rem;
+    }
    }
 
     &__img_first {
         @include img_homepage;
         background-image: url("../../Images/01_thisisengineering.png");
-        width: 10rem;
-        height: 10rem;
+        width: 9rem;
+        height: 9rem;
         left: 15px;
         top: 300px;
+        @include notebook{
+            left: 530px;
+            top: 380px;
+        }
     }
 
     &__img_second {
         @include img_homepage;
         background-image: url("../../Images/02_laura-chouette.png");
-        width: 11rem;
-        height: 11rem;
+        width: 10rem;
+        height: 10rem;
         left: 170px;
         top: 270px;
+        @include notebook{
+            left: 680px;
+            top: 350px;
+        }
+    
     }
     
     &__img_third {
         @include img_homepage;
         background-image: url("../../Images/03_christian-buehne.png");
-        width: 11rem;
-        height: 11rem;
+        width: 10rem;
+        height: 10rem;
         left: 46px;
         top: 458px;
+        @include notebook{
+            left: 560px;
+            top: 530px;
+        }
+    }
+
+    &__img_fourth {
+        @include img_homepage;
+        background-image: url("../../Images/04_disruptivo.png");
+        width: 8rem;
+        height: 8rem;
+        left: 210px;
+        top: 430px;
+        @include notebook{
+            left: 720px;
+            top: 500px;
+        }
     }
 }
