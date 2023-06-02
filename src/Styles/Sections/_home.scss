@@ -31,14 +31,13 @@
     line-height: 1.625rem;
     margin-top: 1rem;
     @include notebook{
-        width: 100%;
-    margin-top: 3.75rem;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 34px;
-    letter-spacing: 0em;
-    text-align: left;
-
+        width: 70%;
+        margin-top: 3.75rem;
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 34px;
+        letter-spacing: 0em;
+        text-align: left;
     }
    }
    &__arrow_icon {
@@ -53,13 +52,14 @@
    &__btn {
     width: 100%;
     @include notebook{
-        width: 24.75;
+        width: 25rem;
     }
    }
    &__btn_txt_first{
     font-size: 1.125rem;
     font-weight: 400;
-    padding-bottom: 2rem;
+    margin-top: 8rem;
+    margin-bottom: 1rem;
    }
    &__btn_txt_second {
     font-size: 1.4rem;

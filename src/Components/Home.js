@@ -34,10 +34,12 @@ const Home = () => {
             <div className="home">
                 <div className="home__description">
                     <h2 className="home__title">Czy wiedziałeś, że inni harcerze</h2>
-                    <p className="home__text">oceniają swoje umiejętności harcerskie zupełnie inaczej, 
-                        niż widzą to inni harcerze</p>
+                    <p className="home__text">oceniają swoje umiejętności harcerskie 
+                    <br/>
+                        zupełnie inaczej, niż widzą to inni harcerze</p>
+                    <p className="home__btn_txt_first">Zrób test harcerski</p>
+
                         <Link to="/wykonajtest">
-                <span className="home__btn_txt_first">Zrób test harcerski</span>
                         <button className="btn home__btn">
                             <span className="home__btn_txt_second">Zobacz jak oceniają cię innni</span>
                             <div className="home__arrow_icon"></div>
