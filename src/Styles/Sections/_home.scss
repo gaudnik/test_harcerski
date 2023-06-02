@@ -1,12 +1,15 @@
 .home {
     display: block;
     @include notebook{
+        margin: 0 auto;
+        width: 80%;
         display: flex;
+        justify-content: space-between;
     }
     &__description{
         margin: 1.188rem;
         @include notebook {
-            margin-left: 13.875rem;
+            margin-left: 8rem;
             margin-top: 3.75rem;
             width: 40%;
         }
@@ -17,6 +20,8 @@
     line-height: 1.625rem;
     @include notebook {
         font-size: 2.125rem;
+        line-height: 3rem;
+
     }
     
    }
@@ -62,25 +67,34 @@
    }
 
    &__img_board {
-    width: 100%;
     height: auto;
+    padding-bottom: 10%;
+    position: relative;
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    top: 0;
+    left: 0;
+
     @include notebook {
-        width: 50%;
-        display: flex;
-        justify-content: flex-end;
+        margin-right: 11.25rem;
+
     }
    }
 
    &__background {
+    position: relative;
+    z-index: 1;
     background-image: url("../../Images/background_home.png");
     background-size: cover;
+    margin-left: 3rem;
     width: 21rem;
-    height: 27rem;
-    margin-left: 3.5rem;
+    height: 28rem;
+    
     @include notebook{
-        margin-right: 10rem;
-        width: 30rem;
-        height: 40.313rem;
+        margin-top: 1.625rem;
+        width: 35rem;
+        height: 46.5rem;
     }
    }
 
@@ -89,11 +103,13 @@
         background-image: url("../../Images/01_thisisengineering.png");
         width: 9rem;
         height: 9rem;
-        left: 15px;
-        top: 300px;
+        right: 54%;
+        top: 60px;
         @include notebook{
-            left: 530px;
-            top: 380px;
+            width: 14rem;
+            height: 14rem;
+            left: 20px;
+            top: 160px;
         }
     }
 
@@ -102,11 +118,13 @@
         background-image: url("../../Images/02_laura-chouette.png");
         width: 10rem;
         height: 10rem;
-        left: 170px;
-        top: 270px;
+        left: 52%;
+        top: 40px;
         @include notebook{
-            left: 680px;
-            top: 350px;
+            width: 16rem;
+            height: 16rem;
+            left: 250px;
+            top: 100px;
         }
     
     }
@@ -116,11 +134,13 @@
         background-image: url("../../Images/03_christian-buehne.png");
         width: 10rem;
         height: 10rem;
-        left: 46px;
-        top: 458px;
+        right: 48%;
+        top: 220px;
         @include notebook{
-            left: 560px;
-            top: 530px;
+            width: 15rem;
+            height: 15rem;
+            left: 60px;
+            top: 380px;
         }
     }
 
@@ -129,11 +149,13 @@
         background-image: url("../../Images/04_disruptivo.png");
         width: 8rem;
         height: 8rem;
-        left: 210px;
-        top: 430px;
+        left: 54%;
+        top: 200px;
         @include notebook{
-            left: 720px;
-            top: 500px;
+            width: 12rem;
+            height: 12rem;
+            left: 280px;
+            top: 340px;
         }
     }
 }
