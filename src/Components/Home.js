@@ -20,13 +20,13 @@ const Home = () => {
                 <div className="home__img_fourth"></div>
             </div>
             <Link to="/wykonajtest">
-                    <button className="btn home__btn">
-                        <span className="home__btn_txt_first">Zrób test harcerski</span>
+                <button className="btn home__btn">
+                    <span className="home__btn_txt_first">Zrób test harcerski</span>
                         <br/>
-                        <span className="home__btn_txt_second">Zobacz jak oceniają cię innni</span>
-                        <div className="home__arrow_icon"></div>
-                    </button>
-                </Link>
+                    <span className="home__btn_txt_second">Zobacz jak oceniają cię innni</span>
+                    <div className="home__arrow_icon"></div>
+                </button>
+            </Link>
         </div>
     )
     }else {
