@@ -1,8 +1,30 @@
 import React, { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-const DoATest = () => {
 
+const PasswordInput = ({ value, onChange }) => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
+  return (
+    <div className="password-input">
+      <input
+        type={showPassword ? 'text' : 'password'}
+        value={value}
+        onChange={onChange}
+        className="password-input__input"
+      />
+      <span className="password-input__icon" onClick={togglePasswordVisibility}>
+        {showPassword ? <FaEyeSlash /> : <FaEye />}
+      </span>
+    </div>
+  );
+};
+
+const DoATest = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [position, setPosition] = useState('');
@@ -20,67 +42,72 @@ const DoATest = () => {
     });
   };
 
-  const [showPassword, setShowPassword] = useState(false);
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
-
   return (
     <div className="doatest">
-        <form onSubmit={handleSubmit}>
-            <h1 className="doatest__header">Wykonaj test</h1>
-        <div>
-            <label htmlFor="firstName" className="doatest__label">Twoje imię:</label>
+      <form onSubmit={handleSubmit} className="doatest__form">
+        <h1 className="doatest__header">Wykonaj test</h1>
+        <div className="doatest__row-name">
+          <div className="doatest__row-inline">
+            <label htmlFor="firstName" className="doatest__label">
+              Podaj imię:
+            </label>
             <input
-            type="text"
-            id="firstName"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
+              type="text"
+              id="firstName"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              className="doatest__input-name"
             />
-        </div>
-        <div>
-            <label htmlFor="lastName" className="doatest__label">Twoje nazwisko:</label>
+          </div>
+          <div className="doatest__row-inline">
+            <label htmlFor="lastName" className="doatest__label">
+              Podaj nazwisko:
+            </label>
             <input
-            type="text"
-            id="lastName"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
+              type="text"
+              id="lastName"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              className="doatest__input-name"
             />
+          </div>
         </div>
-        <div>
-            <label htmlFor="position" className="doatest__label">Nazwa obecnego stanowiska:</label>
-            <input
+        <div className="doatest__row">
+          <label htmlFor="position" className="doatest__label">
+            Nazwa obecnego stanowiska:
+          </label>
+          <input
             type="text"
             id="position"
             value={position}
             onChange={(e) => setPosition(e.target.value)}
-            />
+            className="doatest__input"
+          />
         </div>
-        <div>
-            <label htmlFor="email" className="doatest__label">Twój aktualny e-mail:</label>
-            <input
+        <div className="doatest__row">
+          <label htmlFor="email" className="doatest__label">
+            Twój aktualny e-mail:
+          </label>
+          <input
             type="email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            />
+            className="doatest__input"
+          />
         </div>
-        <div>
-            <label htmlFor="password" className="doatest__label">Nadaj hasło(wyniki testu po zalogowaniu):</label>
-            <input
-                type={showPassword ? 'text' : 'password'}
-                id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-            />
-             <span className="password-icon" onClick={togglePasswordVisibility}>
-                {showPassword ? <FaEyeSlash /> : <FaEye />}
-             </span>
+        <div className="doatest__row">
+          <label htmlFor="password" className="doatest__label">
+            Nadaj hasło (wyniki testu po zalogowaniu):
+          </label>
+          <PasswordInput value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
-        <Link to="/nastepna-strona">
-        <button type="submit" className='btn doatest__btn'>Dalej</button>
+        <Link to="/nastepna-strona" className="doatest__link">
+          <button type="submit" className="btn doatest__btn">
+            Dalej
+          </button>
         </Link>
-        </form>
+      </form>
     </div>
   );
 };
