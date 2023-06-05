@@ -16,13 +16,18 @@
       margin-bottom: 15px; 
     }
    
-    &__input {
+    &__input, .password-input__input {
         position: relative;
         margin-bottom: 1.563rem;
         height: 2.313rem;
         width: 22rem;
         border: 1px solid $dark_gray;
         border-radius: 5px;
+    }
+    .password-input__icon {
+        position: absolute;
+        left: 305px;
+        top: 418px;
     }
     &__input-name{
         margin-bottom: 1.563rem;
