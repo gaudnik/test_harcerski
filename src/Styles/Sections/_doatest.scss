@@ -3,70 +3,104 @@
     flex-direction: column;
     margin: 1.25rem;
     width: 22rem;
+
+    @include notebook {
+        margin-left: 13.938rem;
+    }
+
     &__form {
       display: flex;
       flex-direction: column;
       width: 100%;
-      max-width: 400px;
+      max-width: 25rem;
     }
   
     &__row {
       display: flex;
       flex-direction: column;
-      margin-bottom: 15px; 
+      margin-bottom: 0.938rem; 
     }
    
-    &__input, .password-input__input {
+    &__input {
         position: relative;
         margin-bottom: 1.563rem;
         height: 2.313rem;
-        width: 22rem;
+        width: 24rem;
         border: 1px solid $dark_gray;
         border-radius: 5px;
     }
-    .password-input__icon {
-        position: absolute;
-        left: 305px;
-        top: 418px;
-    }
+   
     &__input-name{
         margin-bottom: 1.563rem;
-
-        width: 10rem;
+        margin-top: 1rem;
+        border: 1px solid $dark_gray;
+        border-radius: 5px;
+        width: 11rem;
         height: 2.313rem;
-        justify-content: space-between;
+
+        @include notebook{
+            width: 24rem;
+
+          }
     }
+
     &__row-name {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 0;
+        width: 23rem;
       }
 
-  
+    &__row-inline {
+        width: 10rem;
+
+        @include notebook{
+            margin-right: 16rem;
+
+        }
+    }
   
     &__header {
-      font-size: 1.125rem;
+      font-size: 1.4rem;
       font-weight: 600;
+      margin-bottom: 2rem;
     }
   
     &__btn {
-      width: 100%;
+      width: 24rem;
       height: 3.375rem;
     }
-    &__label {
-        margin-bottom: 1.25rem;
-      }
-
-  
-    &__password-icon {
-        cursor: pointer;
-    }
+   
   
     &__link {
       margin-top: 1rem;
       text-decoration: none;
       color: #fff;
     }
+
+    label {
+        margin-bottom: 1.25rem;
+        font-size: 1rem;
+      }
   }
-  
+
+
+  .password-input__input {
+    position: relative;
+    margin-bottom: 1.563rem;
+    height: 2.313rem;
+    width: 24rem;
+    border: 1px solid $dark_gray;
+    border-radius: 5px;
+}
+.password-input__icon {
+    cursor: pointer;
+    position: absolute;
+    left: 23.7rem;
+    top: 32.8rem;
+
+    @include notebook{
+        left: 36.6rem;
+    }
+}
