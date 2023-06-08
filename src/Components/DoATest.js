@@ -102,7 +102,7 @@ const DoATest = () => {
           </label>
           <PasswordInput value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
-        <Link to="/nastepna-strona" className="doatest__link">
+        <Link to={`/krokpierwszy/${firstName}/${lastName}`} className="doatest__link">
           <button type="submit" className="btn doatest__btn">
             Dalej
           </button>
