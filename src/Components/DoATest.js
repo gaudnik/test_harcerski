@@ -25,6 +25,7 @@ const PasswordInput = ({ value, onChange }) => {
 };
 
 const DoATest = () => {
+
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [position, setPosition] = useState('');
@@ -65,7 +66,7 @@ const DoATest = () => {
             </label>
             <input
               type="text"
-              id="lastName"
+              name="lastName"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
               className="doatest__input-name"
@@ -76,9 +77,9 @@ const DoATest = () => {
           <label htmlFor="position" className="doatest__label">
             Nazwa obecnego stanowiska:
           </label>
-          <input
+          <input             
             type="text"
-            id="position"
+            name="position"
             value={position}
             onChange={(e) => setPosition(e.target.value)}
             className="doatest__input"
@@ -90,7 +91,7 @@ const DoATest = () => {
           </label>
           <input
             type="email"
-            id="email"
+            name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="doatest__input"
@@ -102,6 +103,7 @@ const DoATest = () => {
           </label>
           <PasswordInput value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
+
         <Link to={`/krokpierwszy/${firstName}/${lastName}`} className="doatest__link">
           <button type="submit" className="btn doatest__btn">
             Dalej

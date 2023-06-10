@@ -1,0 +1,92 @@
+.stepone {
+    margin: 1.25rem;
+    &__header{
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    &__second-header{
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+    &__test-header{
+        font-weight: 600;
+        width: 23rem;
+        margin-bottom: 1.125rem;
+
+    }
+    p {
+        margin-bottom: 2.5rem;
+    }
+    &__step-number {
+        font-weight: 600;
+        margin-bottom: 1.125rem;
+        span {
+            font-size: 1.25rem;
+            width: 100%;
+        }
+    }
+
+    .stepone__radio {
+        display: flex;
+        margin-bottom: 10px;
+      
+        label {
+          display: block;
+          position: relative;
+          padding-left: 30px;
+          cursor: pointer;
+      
+          input[type='radio'] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            cursor: pointer;
+          }
+      
+      
+      
+        }
+      }
+      
+      .stepone__warning {
+        margin-top: 10px;
+      }
+   
+      .stepone__radio-checkmark {
+        display: flex   ;
+
+        width: 18px;
+        height: 18px;
+        border: 2px solid black;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      
+  
+      input[type='radio']:checked + .stepone__radio-checkmark {
+        border: 5px solid purple;
+      }
+      input[type='radio']:checked + .stepone__radio-label {
+        font-weight: bold;
+        color: purple;
+      }
+    
+      .stepone__radio input[type='radio'] {
+        display: none;
+      }
+      
+      .stepone__radio-span {
+        display: inline-block;
+        // width: 18px;
+        // height: 18px;
+        border: 2px solid black;
+        border-radius: 50%;
+      }
+      
+      .stepone__radio input[type='radio']:checked + .stepone__radio-span {
+        border: 5px solid purple;
+      }
+      
+}
