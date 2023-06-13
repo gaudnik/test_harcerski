@@ -50,10 +50,10 @@
     margin-right: 1rem;
    }
    &__btn {
-    width: 100%;
+    @include btn-settings;
     height: 5rem;
     @include notebook{
-        width: 25rem;
+        width: 24rem;
     }
    }
    &__btn_txt_first{

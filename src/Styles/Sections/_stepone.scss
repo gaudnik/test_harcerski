@@ -1,13 +1,7 @@
 .stepone {
-    margin: 1.25rem;
-    @include notebook {
-      margin-left: 14.063rem;
-    }
+    @include section-mobile;
     &__btn {
-      width: 100%;
-      @include notebook{
-        width: 21.25rem;
-      }
+      @include btn-settings;
     }
     &__header{
         font-size: 1.125rem;
@@ -15,29 +9,16 @@
         margin-bottom: 1rem;
     }
     &__second-header{
-        font-size: 1.125rem;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
+       @include second-header;
     }
     &__test-header{
-        font-weight: 600;
-        width: 23rem;
-        margin-bottom: 1.125rem;
-        @include notebook{
-          width: 100%;
-        }
-
+       @include test-header;
     }
     p {
         margin-bottom: 2.5rem;
     }
     &__step-number {
-        font-weight: 600;
-        margin-bottom: 1.125rem;
-        span {
-            font-size: 1.25rem;
-            width: 100%;
-        }
+       @include step-number;
       
     }
     

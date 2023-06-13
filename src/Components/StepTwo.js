@@ -16,13 +16,12 @@ const StepTwo = () => {
 
   return (
     <div className="steptwo">
-      <h1 className="steptwo__second-header">Wykonaj test</h1>
+      <h1 className="steptwo__header">Wykonaj test</h1>
       <h2 className="steptwo__step-number">
         Krok <span>2</span> z 3
       </h2>
-      <div className="steptwo__test"></div>
-      <h2>Wprowadź swoje główne umiejętności harcerskie: minimum 4, maksimum 6</h2>
-     
+      <h2 className='steptwo__test-header'>Wprowadź swoje główne umiejętności harcerskie: minimum 4, maksimum 6</h2>
+     <div className='steptwo__add-skills'>
       {skills.map((skill, index) => (
         <div key={index} className='steptwo__skillbox'>{`Umiejętność nr. ${index + 1}`}   
           <input className='steptwo__input'
@@ -32,11 +31,12 @@ const StepTwo = () => {
           />
         </div>
       ))}
+      </div>
       <button className='steptwo__addskill-btn'
         onClick={addSkill}>+ Dodaj kolejną umiejętność
       </button>
-      <p>Jeśli nie chcesz już dodawać więcej umiejętności kliknij “Dalej”</p>
-      <h2 className="stepone__step-number">
+      <p className='steptwo__info'>Jeśli nie chcesz już dodawać więcej umiejętności kliknij “Dalej”</p>
+      <h2 className="steptwo__step-number">
         Krok <span>2</span> z 3
       </h2>
       <Link to="/kolejna-strona">

@@ -4,3 +4,49 @@
     }
   }
   
+  @mixin section-mobile {
+    margin: 1.25rem;
+    @include notebook {
+      margin-left: 14.063rem;
+    }
+  }
+
+  @mixin btn-settings {
+    width: 100%;
+      @include notebook{
+        width: 21.25rem;
+      }
+  }
+
+  @mixin second-header{
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  @mixin step-number {
+    font-weight: 600;
+    margin-bottom: 1.125rem;
+    span {
+        font-size: 1.25rem;
+        width: 100%;
+    }
+  }
+
+  @mixin test-header {
+    font-weight: 600;
+    width: 23rem;
+    margin-bottom: 1.125rem;
+    @include notebook{
+      width: 100%;
+    }
+
+  }
+
+  @mixin inputs {
+    margin-bottom: 1.563rem;
+    margin-top: 1rem;
+    border: 1px solid #5F6368;
+    border-radius: 5px;
+    height: 2.313rem;
+  }
