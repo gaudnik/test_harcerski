@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 
 const StepTwo = () => {
+  const { firstName, lastName } = useParams();
+
     const [skills, setSkills] = useState(['', '', '', '']);
 
     const handleSkillChange = (index, value) => {
@@ -39,7 +42,7 @@ const StepTwo = () => {
       <h2 className="steptwo__step-number">
         Krok <span>2</span> z 3
       </h2>
-      <Link to="/kolejna-strona">
+      <Link to={`/kroktrzeci/${firstName}/${lastName}`}>
         <button className='btn steptwo__btn'>Dalej</button>
       </Link>
     </div>
