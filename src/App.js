@@ -5,6 +5,7 @@ import Header from './Components/Header';
 import Home from './Components/Home';
 import DoATest from './Components/DoATest';
 import StepOne from './Components/StepOne';
+import StepTwo from './Components/StepTwo';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/wykonajtest" element={<DoATest/>}/>
         <Route path="/krokpierwszy/:firstName/:lastName" element={<StepOne/>}/>
+        <Route path="/krokdrugi/:firstName/:lastName" element={<StepTwo/>}/>
 
       </Routes>
     </div>

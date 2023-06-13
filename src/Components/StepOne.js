@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const StepOne = () => {
   const { firstName, lastName } = useParams();
@@ -121,9 +122,11 @@ const StepOne = () => {
           <h2 className="stepone__step-number">
            Krok <span>1</span> z 3
           </h2>
-          <button className="btn stepone__btn" type="submit">
-            Dalej
-          </button>
+          <Link to={`/krokdrugi/${firstName}/${lastName}`}>
+            <button className="btn stepone__btn" type="submit">
+              Dalej
+            </button>
+          </Link>
         </form>
       </div>
     </div>

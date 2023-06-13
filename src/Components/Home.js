@@ -39,7 +39,7 @@ const Home = () => {
                         zupełnie inaczej, niż widzą to inni harcerze</p>
                     <p className="home__btn_txt_first">Zrób test harcerski</p>
 
-                        <Link to="/wykonajtest">
+                    <Link to="/wykonajtest">
                         <button className="btn home__btn">
                             <span className="home__btn_txt_second">Zobacz jak oceniają cię innni</span>
                             <div className="home__arrow_icon"></div>
