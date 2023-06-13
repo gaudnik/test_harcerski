@@ -1,5 +1,11 @@
 .stepone {
     margin: 1.25rem;
+    &__btn {
+      width: 100%;
+      @include notebook{
+        width: 21.25rem;
+      }
+    }
     &__header{
         font-size: 1.125rem;
         font-weight: 600;
@@ -26,16 +32,18 @@
             font-size: 1.25rem;
             width: 100%;
         }
+      
     }
+    
 
     .stepone__radio {
         display: flex;
         margin-bottom: 10px;
       
         label {
+          line-height: 1.5rem;
           display: block;
           position: relative;
-          padding-left: 30px;
           cursor: pointer;
       
           input[type='radio'] {
@@ -55,13 +63,14 @@
       }
    
       .stepone__radio-checkmark {
-        display: flex   ;
-
-        width: 18px;
-        height: 18px;
+        display: block;
+        float: left;
+        width: 1.125rem;
+        height: 1.125rem;
         border: 2px solid black;
         border-radius: 50%;
         margin-right: 10px;
+        margin-bottom: 2rem;
       }
       
   
@@ -78,9 +87,6 @@
       }
       
       .stepone__radio-span {
-        display: inline-block;
-        // width: 18px;
-        // height: 18px;
         border: 2px solid black;
         border-radius: 50%;
       }

@@ -118,7 +118,7 @@ const StepOne = () => {
             <div className="stepone__warning-icon"></div>
             {showWarning && <p style={{ color: 'red' }}>Uzupełnij tę odpowiedź!</p>}
           </div>
-          <button className="btn onestep_btn" type="submit">
+          <button className="btn stepone__btn" type="submit">
             Dalej
           </button>
         </form>

@@ -1,15 +1,15 @@
 @import "./Generic/reset";
 
-@import "./Settings/mixins";
-@import "./Settings/base";
-
 @import "./Variables/colors";
 @import "./Variables/decoration";
 
-@import "./Elements/buttons";
+@import "./Settings/mixins";
+@import "./Settings/base";
 
 @import "./Sections/menu";
 @import "./Sections/header";
 @import "./Sections/home";
 @import "./Sections/_doatest";
 @import "./Sections/stepone";
+
+@import "./Elements/buttons";
