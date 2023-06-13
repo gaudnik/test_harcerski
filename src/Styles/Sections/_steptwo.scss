@@ -31,4 +31,13 @@
         @include inputs;
         width: 25rem;
     }
+    &__addskill-btn {
+        width: 19rem;
+        height: 3rem;
+        background: $color_light_gray;
+        border: 2px solid $dark_gray;
+        border-radius: 0.75rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
 }
