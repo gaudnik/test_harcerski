@@ -1,5 +1,8 @@
 .stepone {
     margin: 1.25rem;
+    @include notebook {
+      margin-left: 14.063rem;
+    }
     &__btn {
       width: 100%;
       @include notebook{
@@ -20,6 +23,9 @@
         font-weight: 600;
         width: 23rem;
         margin-bottom: 1.125rem;
+        @include notebook{
+          width: 100%;
+        }
 
     }
     p {
