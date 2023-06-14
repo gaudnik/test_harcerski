@@ -1,5 +1,5 @@
 .testrules {
-    margin: 1.25rem;
+    @include section-mobile;
     &__header {
         @include test-header;
         margin-top: 1.6rem;
