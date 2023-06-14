@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 
 const StepOne = () => {
   const { firstName, lastName } = useParams();
 
   const [selectedOption, setSelectedOption] = useState('');
   const [showWarning, setShowWarning] = useState(false);
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   const handleOptionChange = (option) => {
     setSelectedOption(option);
@@ -22,7 +21,7 @@ const StepOne = () => {
     }
     // Tutaj dodać logikę związaną z wysłaniem danych na serwer
     // np. za pomocą fetch lub innej biblioteki HTTP
-    // history.push('/summary');
+    navigate(`/krokdrugi/${firstName}/${lastName}`);
   };
 
   return (
@@ -43,7 +42,7 @@ const StepOne = () => {
         </h1>
 
         <form onSubmit={handleSubmit}>
-          <div className="stepone__radio">
+        <div className="stepone__radio">
             <label>
               <input
                 type="radio"
@@ -122,11 +121,9 @@ const StepOne = () => {
           <h2 className="stepone__step-number">
            Krok <span>1</span> z 3
           </h2>
-          <Link to={`/krokdrugi/${firstName}/${lastName}`}>
-            <button className="btn stepone__btn" type="submit">
-              Dalej
-            </button>
-          </Link>
+          <button className="btn stepone__btn" type="submit">
+            Dalej
+          </button>
         </form>
       </div>
     </div>

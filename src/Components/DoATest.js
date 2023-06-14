@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const PasswordInput = ({ value, onChange }) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -25,15 +25,23 @@ const PasswordInput = ({ value, onChange }) => {
 };
 
 const DoATest = () => {
-
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [position, setPosition] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!firstName || !lastName || !position || !email || !password) {
+      setError('Wypełnij wszystkie pola formularza.');
+      return;
+    }
+
     console.log('Dane formularza:', {
       firstName,
       lastName,
@@ -41,6 +49,7 @@ const DoATest = () => {
       email,
       password
     });
+    navigate(`/krokpierwszy/${firstName}/${lastName}`);
   };
 
   return (
@@ -77,7 +86,7 @@ const DoATest = () => {
           <label htmlFor="position" className="doatest__label">
             Nazwa obecnego stanowiska:
           </label>
-          <input             
+          <input
             type="text"
             name="position"
             value={position}
@@ -104,11 +113,11 @@ const DoATest = () => {
           <PasswordInput value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
 
-        <Link to={`/krokpierwszy/${firstName}/${lastName}`} className="doatest__link">
-          <button type="submit" className="btn doatest__btn">
-            Dalej
-          </button>
-        </Link>
+        {error && <p className="doatest__error">{error}</p>}
+
+        <button type="submit" className="btn doatest__btn">
+          Dalej
+        </button>
       </form>
     </div>
   );
