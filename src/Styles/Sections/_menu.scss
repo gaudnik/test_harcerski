@@ -1,84 +1,109 @@
 .menu {
-    &__btn {
-      display: none;
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-      opacity: 0;
-      
-      &:checked {
-        & ~ .menu__nav {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 100%;
-          position: absolute;
-          height: 100vh;
-          left: 70%;
-          transform: translateX(-70%);
-          background-color: $color_white;
-          z-index: 3;
-         
-          @include notebook {
-            transform: none;
-            border: 1px solid $primary-color;
-            width: 25%;
-            transform: translateX(-10%);
-
-            height: auto;
-          }
-          h2{
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: $color_black;
-            margin-top: 3.75rem;
-            margin-bottom: 2rem;
-
-          }
-          
-          .menu__element {
-            margin-bottom: 2rem;
-            width: 100%;
-            text-align:left;
-            font-weight: 500; 
-            font-size: 1rem;
-            padding-left: 1.875rem;
-            a {
-              color: $primary-color;
-            }
-            
-            a:active {
-              color: $light_gray;
-            }
-          }
-        }
-      }
-    }
-  
-    &__toggle {
-      display: block;
-      float: left;
-      margin: 1.25rem;
-
-  
-      span {
-        width: 1.35rem;
-        height: 2px;
-        display: block;
-        margin-bottom: 0.525rem;
-        background-color: $dark_gray;
-        transition: .3s all ease-in-out;
-        align-items: start;
-        border-radius: 2px;
-  
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-  
-  .menu__nav {
+  &__btn {
     display: none;
   }
-  
+
+  &__toggle {
+    display: block;
+    position: absolute;
+    float: left;
+    top: 1.25rem;
+    right: 1rem;
+    width: 1.35rem;
+    height: 2px;
+    background-color: $dark_gray;
+    transition: .3s all ease-in-out;
+    align-items: start;
+    border-radius: 2px;
+    @include notebook{
+      right: 4rem;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 1.35rem;
+      height: 2px;
+      background-color: $dark_gray;
+      transition: .3s all ease-in-out;
+      align-items: start;
+      border-radius: 2px;
+    }
+
+    &:before {
+      top: -0.525rem;
+
+    }
+
+    &:after {
+      z-index: 5;
+      bottom: -0.525rem;
+    }
+  }
+
+  &__toggle.open {
+    background-color: transparent;
+
+    &:before {
+      z-index: 5;
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__nav {
+    display: none;
+    position: absolute;
+    top: 0; /* Przeniesione na górę strony */
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    background-color: $color_white;
+    z-index: 3;
+
+    @include notebook {
+      transform: none;
+      border: 1px solid $primary-color;
+      width: 25%;
+      transform: translateX(-10%);
+      height: auto;
+    }
+
+    h2 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: $color_black;
+      margin-top: 3.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .menu__element {
+      margin-bottom: 2rem;
+      width: 100%;
+      text-align: left;
+      font-weight: 500;
+      font-size: 1rem;
+      padding-left: 1.875rem;
+
+      a {
+        color: $primary-color;
+      }
+
+      a:active {
+        color: $light_gray;
+      }
+    }
+  }
+
+  &__btn:checked ~ .menu__nav {
+    display: flex;
+  }
+}

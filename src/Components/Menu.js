@@ -17,7 +17,7 @@ const Menu = () => {
         checked={isMenuOpen}
         onChange={toggleMenu}
       />
-      <label htmlFor="menu__btn" className="menu__toggle">
+      <label htmlFor="menu__btn" className={`menu__toggle ${isMenuOpen ? "open" : ""}`}>
         <span></span>
         <span></span>
         <span></span>
@@ -25,58 +25,37 @@ const Menu = () => {
       <ul className={`menu__nav ${isMenuOpen ? "open" : ""}`}>
         <h2>MENU</h2>
         <li className="menu__element">
-          <Link
-            to="/jaktodziala"
-            onClick={() => setMenuOpen(false)}
-          >
+          <Link to="/jaktodziala" onClick={() => setMenuOpen(false)}>
             Jak działa test harcerski
           </Link>
         </li>
         <li className="menu__element">
-          <Link
-            to="/zasady"
-            onClick={() => setMenuOpen(false)}
-          >
+          <Link to="/zasady" onClick={() => setMenuOpen(false)}>
             Ważne zasady testu
           </Link>
         </li>
         <li className="menu__element">
-          <Link
-            to="/przykladoweoceny"
-            onClick={() => setMenuOpen(false)}
-          >
+          <Link to="/przykladoweoceny" onClick={() => setMenuOpen(false)}>
             Przykładowe oceny innych
           </Link>
         </li>
         <li className="menu__element">
-          <Link
-            to="/zrobtest"
-            onClick={() => setMenuOpen(false)}
-          >
+          <Link to="/zrobtest" onClick={() => setMenuOpen(false)}>
             Wykonaj test dla siebie
           </Link>
         </li>
         <li className="menu__element">
-          <Link
-            to="/wesprzyjnas"
-            onClick={() => setMenuOpen(false)}
-          >
+          <Link to="/wesprzyjnas" onClick={() => setMenuOpen(false)}>
             Wesprzyj nas datkiem
           </Link>
         </li>
         <li className="menu__element">
-          <Link
-            to="/rodo"
-            onClick={() => setMenuOpen(false)}
-          >
+          <Link to="/rodo" onClick={() => setMenuOpen(false)}>
             RODO
           </Link>
         </li>
         <li className="menu__element">
-          <Link
-            to="/onas"
-            onClick={() => setMenuOpen(false)}
-          >
+          <Link to="/onas" onClick={() => setMenuOpen(false)}>
             O nas
           </Link>
         </li>

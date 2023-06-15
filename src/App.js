@@ -7,7 +7,7 @@ import DoATest from './Components/DoATest';
 import StepOne from './Components/StepOne';
 import StepTwo from './Components/StepTwo';
 import StepThree from './Components/StepThree';
-import TestRules from   './Components/TestRules';
+import TestRules from './Components/TestRules';
 
 
 function App() {

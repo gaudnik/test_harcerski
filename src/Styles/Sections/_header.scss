@@ -54,7 +54,14 @@
 
     width: 1.7rem;
     height: 1.7rem;
-    margin-left: 1.875rem;
+    margin-left: 0.5rem;
+    margin-right: 3rem;
+    @include notebook{
+      margin-left: 1.875rem;
+      margin-right: 0.5rem;
+
+    }
+
 
   }
   
