@@ -9,6 +9,7 @@
     &__description{
         margin: 1.188rem;
         @include notebook {
+            margin: 0;
             margin-top: 3.75rem;
         }
     }
@@ -59,10 +60,11 @@
     }
    }
    &__btn_txt_first{
+    position: absolute;
     font-size: 1.125rem;
-    font-weight: 400;
-    margin-top: 8rem;
-    margin-bottom: 1rem;
+    font-weight: 500;
+    left: 224px;
+    top: 480px;
    }
    &__btn_txt_second {
     font-size: 1.4rem;
