@@ -1,5 +1,5 @@
 .header {
-    padding: 0.625rem;
+    padding: 1.25rem 0;
     font-size: 0.938rem;
     border-bottom: 1px solid $dark_gray;
   
@@ -15,18 +15,23 @@
   }
   
   &__logo_text {
-      margin: 1.25rem;
-      font-size: 1.5rem;
+      font-size: 0.938rem;
+      margin-left: 1.25rem;
+      font-weight: 600;
       color: $dark_gray
   }
   
   &__right {
+    width: 11.063rem;
     display: flex;
     align-items: center;
+    @include notebook{
+      justify-content: flex-end;
+    }
   }
   
   &__global-icon {
-    background-image: url("../../Images/global_icon.png");
+    background-image: url("../../Images/global_icon.svg");
     background-size: cover;
     background-position: center;
     width: 1.7rem;
@@ -34,28 +39,27 @@
     margin-right: 0.445rem;
   }
   
-  h2 {
+  &__pl {
     font-size: 12px;
     color: #333;
   }
   
   &__arrow {
-    background-image: url("../../Images/arrow_icon.png");
+    background-image: url("../../Images/arrow_icon.svg");
     background-repeat: no-repeat;
     width: 1rem;
     height: 0.7rem;
   }
   
   &__account {
-    background-image: url("../../Images/account_icon.png") ;
+    background-image: url("../../Images/account_icon.svg") ;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
     width: 1.7rem;
     height: 1.7rem;
-    margin-left: 0.5rem;
-    margin-right: 3rem;
+    margin-left: 0.904rem;
+    margin-right: 1.333rem;
     @include notebook{
       margin-left: 1.875rem;
       margin-right: 0.5rem;
@@ -64,8 +68,4 @@
 
 
   }
-  
-//   .header__menu {
-//     /* Dodatkowe style dla menu */
-//   }
 }

@@ -1,9 +1,11 @@
 @mixin img_homepage {
     position: absolute;
     z-index: 2;
-    background-size: cover;
-    border: 3px solid $color_white;
-    border-radius: 50%;
+    background-repeat: no-repeat;
     max-width: 100%;
     display: block;
+    @include notebook {
+        background-size: cover;
+
+    }
 }

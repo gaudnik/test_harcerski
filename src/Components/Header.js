@@ -11,12 +11,12 @@ const Header = () => {
                 </div>
                 <div className="header__right">
                     <div className="header__global-icon"></div>
-                    <h2>PL</h2>
+                    <h2 className="header__pl">PL</h2>
                     <div className="header__arrow"></div>
                     <div className="header__account"></div>
                     <div className= "header__menu">
                      <Menu/>
-                     </div>
+                    </div>
                 </div>
             </div>
         </div>

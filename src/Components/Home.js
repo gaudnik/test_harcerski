@@ -13,17 +13,27 @@ const Home = () => {
     return (
       <div className="home">
         <div className="home__description">
-          <h2 className="home__title">Czy wiedziałeś, że inni harcerze oceniają</h2>
+          <h2 className="home__title">Czy wiedziałeś, że harcerze oceniają</h2>
           <p className="home__text">
-            swoje umiejętności harcerskie zupełnie inaczej, niż widzą to inni harcerze
+            swoje umiejętności
+            <br/> 
+            harcerskie zupełnie inaczej,
+            <br/>
+            niż widzą to inni harcerze
           </p>
         </div>
         <div className="home__img_board">
           <div className="home__background"></div>
+          <div className="home__pink-ellipse"></div>
           <div className="home__img_first"></div>
+          <div className="home__ellipse-1"></div>
           <div className="home__img_second"></div>
+          <div className="home__ellipse-2"></div>
           <div className="home__img_third"></div>
+          <div className="home__ellipse-3"></div>
           <div className="home__img_fourth"></div>
+          <div className="home__ellipse-4"></div>
+
         </div>
         <button className="btn home__btn" onClick={handleStartTest}>
           <span className="home__btn_txt_first">Zrób test harcerski</span>
@@ -37,7 +47,7 @@ const Home = () => {
     return (
       <div className="home">
         <div className="home__description">
-          <h2 className="home__title">Czy wiedziałeś, że inni harcerze</h2>
+          <h2 className="home__title">Czy wiedziałeś, że harcerze</h2>
           <p className="home__text">
             oceniają swoje umiejętności harcerskie
             <br />
@@ -51,10 +61,16 @@ const Home = () => {
         </div>
         <div className="home__img_board">
           <div className="home__background"></div>
+          <div className="home__pink-ellipse"></div>
           <div className="home__img_first"></div>
+          <div className="home__ellipse-1"></div>
           <div className="home__img_second"></div>
+          <div className="home__ellipse-2"></div>
           <div className="home__img_third"></div>
+          <div className="home__ellipse-3"></div>
           <div className="home__img_fourth"></div>
+          <div className="home__ellipse-4"></div>
+
         </div>
       </div>
     );

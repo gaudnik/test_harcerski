@@ -18,9 +18,11 @@ const Menu = () => {
         onChange={toggleMenu}
       />
       <label htmlFor="menu__btn" className={`menu__toggle ${isMenuOpen ? "open" : ""}`}>
+        <div className="menu__x">
         <span></span>
         <span></span>
         <span></span>
+        </div>
       </label>
       <ul className={`menu__nav ${isMenuOpen ? "open" : ""}`}>
         <h2>MENU</h2>

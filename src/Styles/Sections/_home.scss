@@ -2,16 +2,14 @@
     display: block;
     @include notebook{
         margin: 0 auto;
-        width: 80%;
         display: flex;
+        margin-left: 13.875rem;
         justify-content: space-between;
     }
     &__description{
         margin: 1.188rem;
         @include notebook {
-            margin-left: 8rem;
             margin-top: 3.75rem;
-            width: 40%;
         }
     }
     &__title {
@@ -26,17 +24,15 @@
     
    }
    &__text {
-    width: 60%;
+    width: 100%;
     font-size: 1rem;
     line-height: 1.625rem;
     margin-top: 1rem;
     @include notebook{
-        width: 70%;
         margin-top: 3.75rem;
         font-size: 1.25rem;
         font-weight: 500;
         line-height: 34px;
-        letter-spacing: 0em;
         text-align: left;
     }
    }
@@ -51,9 +47,15 @@
    }
    &__btn {
     @include btn-settings;
+    position: absolute;
+    z-index: 2;
     height: 5rem;
+    top: 592px;
     @include notebook{
-        width: 24rem;
+        width: 396px;
+        height: 71px;
+        left: 224px;
+        top: 514px;
     }
    }
    &__btn_txt_first{
@@ -68,95 +70,179 @@
    }
 
    &__img_board {
+    margin: 0 auto;
+    margin-left: 2rem;
+    width: 300px;
     height: auto;
-    padding-bottom: 10%;
     position: relative;
     display: flex;
     align-items:flex-start;
     justify-content: center;
     top: 0;
     left: 0;
-
     @include notebook {
-        margin-right: 11.25rem;
-
+        margin-bottom: 2rem;
+        width: auto;
     }
    }
 
    &__background {
     position: relative;
     z-index: 1;
-    background-image: url("../../Images/background_home.png");
-    background-size: cover;
-    margin-left: 3rem;
-    width: 21rem;
-    height: 28rem;
+    background-image: url("../../Images/background_home.svg");
+    background-repeat: no-repeat;
+    width: 19rem;
+    height: 26.013rem;
     
     @include notebook{
-        margin-top: 1.625rem;
-        width: 35rem;
-        height: 46.5rem;
+        width: 450px;
+        height: 596px;
+        top: 7.06%;
+        bottom: 16.95%;
+        background-size: cover;
+        background-position: center;
+    }
+   }
+   &__pink-ellipse {
+    position: absolute;
+    background-image: url("../../Images/pink_ellipse.svg");
+    width: 118px;
+    height: 118px;
+    left: 90px;
+    top: 100px;
+    @include notebook{
+        position: absolute;
+        width: 183px;
+        height: 182px;
+        left: 120px;
+        top: 180px;
+        background-size: cover; 
+
     }
    }
 
     &__img_first {
         @include img_homepage;
-        background-image: url("../../Images/01_thisisengineering.png");
+        background-image: url("../../Images/01_thisisengineering.svg");
         width: 9rem;
         height: 9rem;
-        right: 54%;
-        top: 60px;
+        right: 60%;
+        top: 50px;
         @include notebook{
-            width: 14rem;
-            height: 14rem;
-            left: 20px;
-            top: 160px;
+            width: 14.7rem;
+            height: 14.7rem;
+            right: 65%;
+            top: 104px;
+        }
+    }
+    &__ellipse-1 {
+        position: absolute;
+        z-index: 1;
+        background-image: url("../../Images/ellipse_1.svg");
+        width: 117px;
+        height: 117px;
+        right: 204px;
+        top: 70px;
+        @include notebook{
+            background-size: cover;
+            width: 180.99px;
+            height: 182px;
+            right: 70%;
+            top: 135px;
         }
     }
 
     &__img_second {
         @include img_homepage;
-        background-image: url("../../Images/02_laura-chouette.png");
-        width: 10rem;
-        height: 10rem;
-        left: 52%;
-        top: 40px;
+        background-image: url("../../Images/02_laura-chouette.svg");
+        width: 186.87px;
+        height: 249px;
+        left: 30%;
+        top: 25px;
         @include notebook{
-            width: 16rem;
-            height: 16rem;
-            left: 250px;
-            top: 100px;
+            width: 18rem;
+            height: 18rem;
+            left: 130px;
+            top: 69px;
         }
     
+    }
+     &__ellipse-2 {
+        position: absolute;
+        z-index: 1;
+        background-image: url("../../Images/ellipse_2.svg");
+        width: 144px;
+        height: 144px;
+        left: 122px;
+        top: 35px;
+        @include notebook{
+            background-size: cover;
+            left: 180px;
+            top: 84px;
+            width: 223px;
+            height: 222px;
+        }
     }
     
     &__img_third {
         @include img_homepage;
-        background-image: url("../../Images/03_christian-buehne.png");
+        background-image: url("../../Images/03_christian-buehne.svg");
         width: 10rem;
         height: 10rem;
-        right: 48%;
-        top: 220px;
+        right: 45%;
+        top: 210px;
         @include notebook{
-            width: 15rem;
-            height: 15rem;
-            left: 60px;
-            top: 380px;
+            width: 202px;
+            height: 202px;
+            right: 55%;
+            top: 360px;
+        }
+    }
+    &__ellipse-3 {
+        position: absolute;
+        z-index: 1;
+        background-image: url("../../Images/ellipse_3.svg");
+        width: 134px;
+        height: 134px;
+        right: 164px;
+        top: 209px;
+        @include notebook {
+            background-size: cover;
+            width: 205px;
+            height: 205px;
+            right: 248px;
+            top: 359px;
         }
     }
 
     &__img_fourth {
         @include img_homepage;
-        background-image: url("../../Images/04_disruptivo.png");
-        width: 8rem;
-        height: 8rem;
-        left: 54%;
-        top: 200px;
+        background-image: url("../../Images/04_disruptivo.svg");
+        width: 10rem;
+        height: 10rem;
+        left: 40%;
+        top: 190px;
         @include notebook{
-            width: 12rem;
-            height: 12rem;
-            left: 280px;
-            top: 340px;
+            width: 19rem;
+            height: 19rem;
+            left: 35%;
+            top: 325px;
+        }
+    }
+    &__ellipse-4 {
+        position: absolute;
+        background-image: url("../../Images/ellipse_4.svg");    
+        z-index: 1;
+        width: 120px;
+        height: 120px;
+        left: 160px;
+        top: 187px;
+        @include notebook {
+            background-size: cover  ;
+            width: 185px;
+            height: 185px;
+            left: 49%;
+            top: 320px;
         }
     }
 }
