@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ReactComponent as MyIcon } from '../Images/eye_icon.svg';
+import { ReactComponent as WarningIcon } from '../Images/warning_icon.svg';
 
 const PasswordInput = ({ value, onChange }) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -38,7 +39,12 @@ const DoATest = () => {
     e.preventDefault();
 
     if (!firstName || !lastName || !position || !email || !password) {
-      setError('Wypełnij wszystkie pola formularza.');
+      setError(
+        <div>
+          <WarningIcon/>
+          <span>Wypełnij wszystkie pola formularza.</span>
+        </div>
+      );
       return;
     }
 
@@ -108,12 +114,12 @@ const DoATest = () => {
         </div>
         <div className="doatest__row">
           <label htmlFor="password" className="doatest__label">
-            Nadaj hasło (wyniki testu po zalogowaniu):
+            Nadaj hasło (wyniki testu zobaczysz po zalogowaniu):
           </label>
           <PasswordInput value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
 
-        {error && <p className="doatest__error">{error}</p>}
+        {error && <p className='doatest__error'>{error}</p>}
 
         <button type="submit" className="btn doatest__btn">
           Dalej
