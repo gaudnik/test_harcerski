@@ -6,7 +6,6 @@
   &__toggle {
     display: block;
     position: absolute;
-    float: left;
     top: 2rem;
     right: 1rem;
     width: 1.35rem;
@@ -53,10 +52,10 @@
       right: 8px;
       @include notebook{
         background-image: url("../../Images/rectangle.svg");
-      height: 55px;
-      width: 55px;
-      top: -25px;
-      right: 16px;
+        height: 55px;
+        width: 55px;
+        top: -26px;
+        right: 16px;
       }
     }
     background-color: transparent;

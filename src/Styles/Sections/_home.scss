@@ -38,13 +38,21 @@
     }
    }
    &__arrow_icon {
-    background-image: url("../../Images/right_arrow.png");
+    background-image: url("../../Images/right_arrow.svg");
     background-size: cover;
     width: 1rem;
     height: 1rem;
     float: right;
-    margin-top: 0.5rem;
-    margin-right: 1rem;
+    margin-left: 17.438rem;
+    margin-bottom: 0.279rem;
+    position: absolute;
+    top: 2.34rem;
+    @include notebook{
+        top: 1.8rem;
+        margin-left: 20rem;
+
+    }
+
    }
    &__btn {
     @include btn-settings;
@@ -52,24 +60,32 @@
     z-index: 2;
     height: 5rem;
     top: 592px;
+    width: 320px;
+    height: 65px;
+    margin-left: 1.313rem;
+    line-height: 1.625rem;
     @include notebook{
         width: 396px;
         height: 71px;
         left: 224px;
         top: 514px;
+        margin-left: 0;
     }
    }
    &__btn_txt_first{
     position: absolute;
-    font-size: 1.125rem;
-    font-weight: 500;
-    left: 224px;
-    top: 480px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    left: 100px;
+    @include notebook{
+        left: 224px;
+        top: 480px;
+    }
    }
    &__btn_txt_second {
-    font-size: 1.4rem;
-    margin-left: 1rem;
-   }
+    font-size: 1.125rem;
+    font-weight: 600;
+   } 
 
    &__img_board {
     margin: 0 auto;
