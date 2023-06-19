@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import { ReactComponent as MyIcon } from '../Images/eye_icon.svg';
 
 const PasswordInput = ({ value, onChange }) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -18,7 +18,7 @@ const PasswordInput = ({ value, onChange }) => {
         className="password-input__input"
       />
       <span className="password-input__icon" onClick={togglePasswordVisibility}>
-        {showPassword ? <FaEyeSlash /> : <FaEye />}
+        {showPassword ? <MyIcon /> : <MyIcon />}
       </span>
     </div>
   );
