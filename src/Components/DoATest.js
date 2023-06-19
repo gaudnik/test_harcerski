@@ -58,7 +58,7 @@ const DoATest = () => {
         <h1 className="doatest__header">Wykonaj test</h1>
         <div className="doatest__row-name">
           <div className="doatest__row-inline">
-            <label htmlFor="firstName" className="doatest__label">
+            <label htmlFor="firstName" className="doatest__label-name">
               Podaj imię:
             </label>
             <input
@@ -66,11 +66,11 @@ const DoATest = () => {
               id="firstName"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-              className="doatest__input-name"
+              className="doatest__input-name doatest__input1"
             />
           </div>
           <div className="doatest__row-inline">
-            <label htmlFor="lastName" className="doatest__label">
+            <label htmlFor="lastName" className="doatest__label-name">
               Podaj nazwisko:
             </label>
             <input
