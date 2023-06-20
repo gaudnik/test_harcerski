@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { ReactComponent as WarningIcon } from '../Images/warning_icon.svg';
 
 const StepTwo = () => {
   const { firstName, lastName } = useParams();
@@ -27,7 +28,12 @@ const StepTwo = () => {
   useEffect(() => {
     const filledSkills = skills.filter((skill) => skill !== '');
     if (filledSkills.length < 4 || skills.length > 6) {
-      setError('Podaj co najmniej 4 umiejętności i maksymalnie 6 umiejętności.');
+      setError(
+        <div>
+        <WarningIcon/>
+        'Podaj co najmniej 4 umiejętności i maksymalnie 6 umiejętności.'
+        </div>
+        );
     } else {
       setError('');
     }

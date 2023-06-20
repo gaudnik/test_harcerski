@@ -29,7 +29,9 @@
     }
     &__input {
         @include inputs;
-        width: 25rem;
+        @include notebook{
+            width: 21.249rem;
+        }
     }
     &__addskill-btn {
         width: 19rem;
@@ -43,5 +45,9 @@
     &__error{
         margin-bottom: 2rem;
         color: red;
+        text-align: center;
+        @include notebook {
+            text-align: left;
+        }
     }
 }
