@@ -1,0 +1,11 @@
+.howitworks {
+    @include section-mobile;
+    &__header {
+        @include test-header;
+        margin-top: 1.6rem;
+    }
+    &__text {
+        margin-bottom: 4rem;
+        line-height: 1.625rem;
+    }
+}
