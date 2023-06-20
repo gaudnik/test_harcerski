@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { ReactComponent as WarningIcon } from '../Images/warning_icon.svg';
 
 const StepOne = () => {
   const { firstName, lastName } = useParams();
@@ -19,8 +20,7 @@ const StepOne = () => {
       setShowWarning(true);
       return;
     }
-    // Tutaj dodać logikę związaną z wysłaniem danych na serwer
-    // np. za pomocą fetch lub innej biblioteki HTTP
+   
     navigate(`/krokdrugi/${firstName}/${lastName}`);
   };
 
@@ -116,7 +116,12 @@ const StepOne = () => {
           </div>
           <div className="stepone__warning">
             <div className="stepone__warning-icon"></div>
-            {showWarning && <p style={{ color: 'red' }}>Uzupełnij tę odpowiedź!</p>}
+            {showWarning && (
+              <div className="stepone__warning">
+                <WarningIcon className="stepone__warning-icon" />
+                <p style={{ color: 'red' }}>Uzupełnij tę odpowiedź!</p>
+              </div>
+            )}
           </div>
           <h2 className="stepone__step-number">
            Krok <span>1</span> z 3
