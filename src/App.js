@@ -8,7 +8,7 @@ import StepOne from './Components/StepOne';
 import StepTwo from './Components/StepTwo';
 import StepThree from './Components/StepThree';
 import TestRules from './Components/TestRules';
-
+import Rodo from './Components/RODO';
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
         <Route path="/krokdrugi/:firstName/:lastName" element={<StepTwo/>}/>
         <Route path="/kroktrzeci/:firstName/:lastName" element={<StepThree/>}/>
         <Route path="/zasady" element={<TestRules/>}/>
+        <Route path="/rodo" element={<Rodo/>}/>
       </Routes>
     </div>
   </Router>  );
