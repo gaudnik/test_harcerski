@@ -17,13 +17,16 @@ const Menu = () => {
         checked={isMenuOpen}
         onChange={toggleMenu}
       />
-      <label htmlFor="menu__btn" className={`menu__toggle ${isMenuOpen ? "open" : ""}`}>
+      <div
+        className={`menu__toggle ${isMenuOpen ? "open" : ""}`}
+        onClick={toggleMenu}
+      >
         <div className="menu__x">
-        <span></span>
-        <span></span>
-        <span></span>
+          <span onClick={toggleMenu}></span>
+          <span onClick={toggleMenu}></span>
+          <span onClick={toggleMenu}></span>
         </div>
-      </label>
+      </div>
       <ul className={`menu__nav ${isMenuOpen ? "open" : ""}`}>
         <h2>MENU</h2>
         <li className="menu__element">

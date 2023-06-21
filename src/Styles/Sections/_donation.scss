@@ -1,7 +1,9 @@
 .donation {
+    @include section-mobile;
     @include notebook {
         display: flex;
-        
+        align-items: center;    
+        justify-content: center;    
     }
     &__background {
         margin: 0 auto;
@@ -13,6 +15,7 @@
         height: 11rem;
         transform: rotate(15deg);
         opacity: 0.6;
+        margin-top: 2rem;
 
         @include notebook { 
             display: flex;
@@ -24,7 +27,7 @@
     }
 
     &__section{
-    margin: 2rem;
+    margin-top: 2rem;
     text-align: center;
     @include notebook{
         width: 50%;

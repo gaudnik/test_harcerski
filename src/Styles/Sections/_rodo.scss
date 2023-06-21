@@ -1,5 +1,10 @@
 .rodo {
     @include section-mobile;
+    @include section-notebook;
+
+    @include notebook{
+        margin: 0 auto;
+    }
     &__header {
         @include test-header;
         margin-top: 1.6rem;

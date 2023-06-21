@@ -1,6 +1,12 @@
 import React from "react";
+import { useEffect } from "react";
 
 const AboutUs = () => {
+    useEffect(() => {
+        const background = document.querySelector(".aboutus__background");
+        background.classList.add("animate-once");
+      }, []);
+
     return (
         <div className="aboutus">
             <div className="aboutus__section">

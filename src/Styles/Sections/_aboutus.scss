@@ -1,5 +1,10 @@
 .aboutus {
     @include section-mobile;
+    @include section-notebook;
+
+    @include notebook{
+        margin: 0 auto;
+    }
     &__header {
         @include test-header;
         margin-top: 1.6rem;
@@ -14,10 +19,21 @@
         width: 20rem;
         height: 15rem;
         margin: 0 auto;
+        animation: pulsate 2s ease-in-out;
         @include notebook {
             width: 25rem;
             height: 20rem;
         }
     }   
-
+    @keyframes pulsate {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+    }
 }

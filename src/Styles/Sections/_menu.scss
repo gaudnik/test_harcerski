@@ -2,7 +2,6 @@
   &__btn {
     display: none;
   }
-
   &__toggle {
     display: block;
     position: absolute;
@@ -12,8 +11,8 @@
     height: 2px;
     background-color: $dark_gray;
     transition: .3s all ease-in-out;
-    align-items: start;
     border-radius: 2px;
+    cursor: pointer;
     @include notebook{
       right: 4rem;
     }
@@ -38,6 +37,9 @@
       z-index: 5;
       bottom: -0.525rem;
     }
+  }
+  &__x {
+    cursor: pointer;
   }
 
   &__toggle.open {
@@ -133,7 +135,6 @@
 
   &__btn:checked ~ .menu__toggle {
     background-color: $dark_gray;
-
     &:before {
       z-index: 5;
       top: 0;

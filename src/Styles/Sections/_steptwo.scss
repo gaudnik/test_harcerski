@@ -1,5 +1,6 @@
 .steptwo {
     @include section-mobile;
+    @include section-notebook;
     &__btn {
         @include btn-settings;
     }
