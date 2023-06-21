@@ -1,0 +1,54 @@
+.donation{
+    margin: 2rem;
+    text-align: center;
+    
+    &__header {
+        @include test-header;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    &__text {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+    &__amounts{
+        margin-bottom: 2rem;
+    }
+    &__amount {
+        margin: 0.25rem;
+        width: 4rem;
+        height: 3rem;
+        font-weight: 600;
+        border-radius: 40%;
+        background-color: $color_light_gray;
+        border: 4px solid $primary-color;
+        @include notebook{
+            width: 6rem;
+            height: 5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+    }
+    &__input{
+        @include inputs;
+        margin-top: 0;
+        margin-bottom: 2rem;
+        @include notebook{
+            width: 21.25rem;
+            height: 2.875rem;
+          } 
+    }
+    &__btn {
+        width: 18rem;
+    }
+    &__input-btn-box{
+        @include notebook{
+        margin: 0 auto;
+        width: 21.25rem;
+        }
+    }
+    &__error{
+        margin: 2rem;
+    }
+}

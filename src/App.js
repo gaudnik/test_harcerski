@@ -10,6 +10,7 @@ import StepThree from './Components/StepThree';
 import TestRules from './Components/TestRules';
 import Rodo from './Components/RODO';
 import HowItWorks from './Components/HowItWorks';
+import DonationComponent from './Components/DonationComponent';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/zasady" element={<TestRules/>}/>
         <Route path="/rodo" element={<Rodo/>}/>
         <Route path="/jaktodziala" element={<HowItWorks/>}/>
+        <Route path="/wesprzyjnas" element={<DonationComponent/>}/>
       </Routes>
     </div>
   </Router>  );
