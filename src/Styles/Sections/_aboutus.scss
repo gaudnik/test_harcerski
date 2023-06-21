@@ -1,0 +1,23 @@
+.aboutus {
+    @include section-mobile;
+    &__header {
+        @include test-header;
+        margin-top: 1.6rem;
+    }
+    &__text {
+        margin-bottom: 2rem;
+        line-height: 1.625rem;
+    }
+    &__background {
+        background-image: url(../../Images/aboutus.jpeg);
+        background-size: cover;
+        width: 20rem;
+        height: 15rem;
+        margin: 0 auto;
+        @include notebook {
+            width: 25rem;
+            height: 20rem;
+        }
+    }   
+
+}
