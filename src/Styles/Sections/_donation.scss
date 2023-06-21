@@ -1,7 +1,36 @@
-.donation{
+.donation {
+    @include notebook {
+        display: flex;
+        
+    }
+    &__background {
+        margin: 0 auto;
+        background-image: url("../../Images/donation_background.png");
+        background-size:cover ;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 10rem;
+        height: 11rem;
+        transform: rotate(15deg);
+        opacity: 0.6;
+
+        @include notebook { 
+            display: flex;
+            margin: 0;           
+            width: 22rem;
+            height: 21rem;
+            margin-top: 3rem;            
+        }
+    }
+
+    &__section{
     margin: 2rem;
     text-align: center;
+    @include notebook{
+        width: 50%;
+    }
     
+    }
     &__header {
         @include test-header;
         font-size: 2rem;
