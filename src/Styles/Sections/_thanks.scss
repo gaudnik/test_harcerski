@@ -1,0 +1,59 @@
+.thanks {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-size: cover;
+        align-items: center;
+    opacity: 0.7;
+    @include notebook {
+        background-image: url("../../Images/thanks1.jpeg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+        align-items: center;
+        background-position: top;
+        height: 89vh;
+    }
+    &__box {
+        margin-top: 6rem;
+        @include notebook{
+        }
+    }
+    &__background-mobile{
+        margin: 0 auto;
+        margin-top: 2rem;
+        background-image: url("../../Images/thanks2.png") ;
+        width: 10rem;
+        height: 10rem;
+        background-position: center;
+        background-size: cover;
+        @include notebook{
+            display: none;
+        }
+    }
+    &__name-header{
+        font-size: 2rem;
+        font-weight: 500;
+        color: $primary-color;
+        @include notebook{
+            font-size: 3rem;
+        }
+
+    }
+    &__header {
+        @include second-header;
+        margin-top: 1.5rem;
+        @include notebook{
+            font-size: 2.125rem;
+        }
+    }
+    &__text {
+        margin-top: 2rem;
+        line-height: 1.5rem;
+        font-weight: 500;
+        @include notebook{
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+    }
+}

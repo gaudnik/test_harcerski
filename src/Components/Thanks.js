@@ -5,14 +5,19 @@ const Thanks = () => {
     const { firstName, lastName } = useParams();
     return (
         <div className="thanks">
-            <h2 className="thanks__header">
-            {firstName} {lastName}
-            <br/>
-                Dziękujemy za wykonanie testu!
-            </h2>
-            <p className="thanks__text">
-                Wyniki dostępne po zalogowaniu :)
-            </p>
+            <div className="thanks__box">
+                <span className="thanks__name-header">{firstName} {lastName}</span>
+                <h2 className="thanks__header">
+                    Dziękujemy za wykonanie testu!
+                </h2>
+                <div className="thanks__background-mobile"></div>
+
+                <p className="thanks__text">
+                    Wyniki dostępne 
+                    <br/>
+                    po zalogowaniu :)
+                </p>
+            </div>
         </div>
     )
 
