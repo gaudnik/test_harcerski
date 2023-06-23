@@ -22,7 +22,7 @@ const StepTwo = () => {
   };
 
   const handleNext = () => {
-    navigate(`/kroktrzeci/${firstName}/${lastName}`);
+    navigate(`/dziekujemy/${firstName}/${lastName}`);
   };
 
   useEffect(() => {

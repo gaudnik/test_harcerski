@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { ReactComponent as WarningIcon } from '../Images/warning_icon.svg';
+import { useNavigate } from 'react-router-dom';
 
 const DonationComponent = () => {
   const [donationAmount, setDonationAmount] = useState('');
   const [error, setError] = useState('');
+
+  const navigate = useNavigate();
 
   const handleAmountChange = (event) => {
     setDonationAmount(event.target.value);
@@ -23,6 +26,8 @@ const DonationComponent = () => {
 
     // Tutaj możesz umieścić kod obsługujący przekazanie datku, np. wysłanie żądania do serwera
     console.log(`Przekazano datek w wysokości: ${donationAmount} zł`);
+    navigate(`/dziekujemyzawsparcie`);
+
   };
 
   return (

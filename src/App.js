@@ -6,12 +6,14 @@ import Home from './Components/Home';
 import DoATest from './Components/DoATest';
 import StepOne from './Components/StepOne';
 import StepTwo from './Components/StepTwo';
-import StepThree from './Components/StepThree';
+import Thanks from './Components/Thanks';
 import TestRules from './Components/TestRules';
 import Rodo from './Components/RODO';
 import HowItWorks from './Components/HowItWorks';
 import DonationComponent from './Components/DonationComponent';
 import AboutUs from './Components/AboutUs';
+import InviteToTest from './Components/InviteToTest';
+import ThanksForDonation from './Components/ThanksForDonation';
 
 function App() {
   return (
@@ -24,13 +26,14 @@ function App() {
         <Route path="/wykonajtest" element={<DoATest/>}/>
         <Route path="/krokpierwszy/:firstName/:lastName" element={<StepOne/>}/>
         <Route path="/krokdrugi/:firstName/:lastName" element={<StepTwo/>}/>
-        <Route path="/kroktrzeci/:firstName/:lastName" element={<StepThree/>}/>
+        <Route path="/dziekujemy/:firstName/:lastName" element={<Thanks/>}/>
         <Route path="/zasady" element={<TestRules/>}/>
         <Route path="/rodo" element={<Rodo/>}/>
         <Route path="/jaktodziala" element={<HowItWorks/>}/>
         <Route path="/wesprzyjnas" element={<DonationComponent/>}/>
+        <Route path= "/dziekujemyzawsparcie" element={<ThanksForDonation/>}/>
         <Route path="/onas" element={<AboutUs/>}/>
-
+        <Route path="/zaprosdotestu" element={<InviteToTest/>}/>
       </Routes>
     </div>
   </Router>  );

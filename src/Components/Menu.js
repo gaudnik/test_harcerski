@@ -40,8 +40,8 @@ const Menu = () => {
           </Link>
         </li>
         <li className="menu__element">
-          <Link to="/przykladoweoceny" onClick={() => setMenuOpen(false)}>
-            Przykładowe oceny innych
+          <Link to="/zaprosdotestu" onClick={() => setMenuOpen(false)}>
+            Zaproś przyjaciół do testu
           </Link>
         </li>
         <li className="menu__element">
