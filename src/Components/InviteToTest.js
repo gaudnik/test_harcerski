@@ -46,24 +46,28 @@ const InviteToTest = () => {
   };
 
   return (
-    <div>
-      <h2>Wprowadź adres e-mail</h2>
-      <input type="email" value={email} onChange={handleInputChange} />
-      <button onClick={handleAddEmail}>Dodaj</button>
+    <div className="invitetotest">
+      <h2 className="invitetotest__header">Wprowadź adres e-mail</h2>
+      <div className="invitetotest__add-box">
+        <input className="invitetotest__input" type="email" value={email} onChange={handleInputChange} />
+        <button className="btn invitetotest__btn" onClick={handleAddEmail}>Dodaj</button>
+      </div>
       {error && <p style={{ color: 'red' }}>{error}</p>}
-      <h3>Lista adresów e-mail:</h3>
+      <h3 className="invitetotest__second-header">Lista adresów e-mail:</h3>
+      <div className="invitetotest__email-box">
       {emailList.length > 0 ? (
         <ul>
           {emailList.map((email) => (
             <li key={email}>
-              {email} <button onClick={() => handleRemoveEmail(email)}>X</button>
+              {email} <button className='invitetotest__remove-btn' onClick={() => handleRemoveEmail(email)}>x</button>
             </li>
           ))}
         </ul>
       ) : (
         <p>Brak dodanych adresów e-mail.</p>
       )}
-      <button disabled={emailList.length === 0} onClick={handleSendInvitations}>
+      </div>
+      <button className="btn invitetotest__btn-send" disabled={emailList.length === 0} onClick={handleSendInvitations}>
         Wyślij zaproszenie
       </button>
     </div>
