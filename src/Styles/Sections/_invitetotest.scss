@@ -1,17 +1,20 @@
 .invitetotest {
     @include section-mobile;
+
     @include notebook {
         margin-left: 13.875rem;
-
     }
-    &__header{
+
+    &__header {
         @include second-header;
     }
-    &__second-header{
+
+    &__second-header {
         @include second-header;
         margin-top: 2rem;
     }
-    &__email-box{
+
+    &__email-box {
         display: flex;
         flex-wrap: wrap;
         width: 20rem;
@@ -20,11 +23,13 @@
         border: 2px solid $primary-color;
         border-radius: 5px;
         font-size: 0.75rem;
-        ul{
+
+        ul {
             display: flex;
             flex-wrap: wrap;
         }
-        li{
+
+        li {
             width: auto;
             padding: 0.25rem;
             margin: 0.2rem; 
@@ -36,7 +41,7 @@
         }
     }
 
-    &__remove-btn{
+    &__remove-btn {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -46,30 +51,33 @@
         background-color: $light_gray;
         border: 1px solid $primary-color;
         border-radius: 50%;
-     
     }
-    &__add-box{
+
+    &__add-box {
         display: flex;
         align-items: center;
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
-    &__input{
+
+    &__input {
         @include inputs;
         margin-bottom: 0;
         margin-top: 0;
         width: 15rem;
         margin-right: 0.5rem;
     }
-    &__btn{
+
+    &__btn {
         margin: 0 auto;
         height: 2.875rem;
         width: 5rem;
-        @include notebook{
+
+        @include notebook {
             margin: 0;
         }
-    
     }
+
     &__btn-send {
         width: 20rem;
         margin-top: 2rem;

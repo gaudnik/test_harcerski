@@ -1,33 +1,37 @@
 .stepone {
     @include section-mobile;
     @include section-notebook;
+
     &__btn {
       @include btn-settings;
     }
-    &__header{
+
+    &__header {
         font-size: 1.125rem;
         font-weight: 600;
         margin-bottom: 1rem;
     }
-    &__second-header{
+
+    &__second-header {
        @include second-header;
     }
-    &__test-header{
+
+    &__test-header {
        @include test-header;
        line-height: 1.2rem;
     }
+
     p {
         margin-bottom: 1.3rem;
         font-size: 0.9rem;
         font-weight: 400;
         line-height: 1.2rem;
     }
+
     &__step-number {
-       @include step-number;
-      
+       @include step-number;  
     }
     
-
     .stepone__radio {
         display: flex;
         margin-bottom: 10px;
@@ -81,6 +85,5 @@
       
       .stepone__radio input[type='radio']:checked + .stepone__radio-span {
         border: 5px solid purple;
-      }
-      
+      }     
 }

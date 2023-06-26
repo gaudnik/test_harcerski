@@ -28,13 +28,14 @@
         border-radius: 5px;
         font-size: 0.938rem;
         font-weight: 600;
-        @include notebook{
+
+        @include notebook {
           width: 21.25rem;
           height: 2.875rem;
         } 
     }
    
-    &__input-name{
+    &__input-name {
         margin-bottom: 1.563rem;
         margin-top: 0.5rem;
         border: 1px solid $dark_gray;
@@ -44,10 +45,9 @@
         font-size: 0.938rem;
         font-weight: 600;
 
-        @include notebook{
+        @include notebook {
             width: 21.25rem;
             height: 2.875rem;
-
           }  
     }
 
@@ -59,14 +59,13 @@
         display: flex;
         align-items: center;
         margin-bottom: 0;
-      }
+    }
 
     &__row-inline {
 
-        @include notebook{
+        @include notebook {
             width: 21.25rem;
             margin-right: 1.625rem;
-
         }
     }
   
@@ -84,6 +83,7 @@
     &__btn {
       width: 20rem;
       height: 3.375rem;
+
       @include notebook {
         width: 21.25rem;
         height: 3.75rem;
@@ -101,19 +101,18 @@
       margin-bottom: 0.5rem;
       font-size: 0.75rem;
       font-weight: 400;
+
       @include notebook {
         font-size: 0.938rem;
-
       }
-      }
+    }
 
-     &__error {
+    &__error {
       margin-bottom: 1.2rem;
       color: red;
       font-size: 0.813rem;
      }
   }
-
 
   .password-input__input {
     position: relative;
@@ -124,19 +123,20 @@
     border-radius: 5px;
     font-size: 0.938rem;
     font-weight: 600;
-    @include notebook{
+
+    @include notebook {
       width: 21.25rem;
       height: 2.875rem;
-
     } 
 }
+
 .password-input__icon {
     cursor: pointer;
     position: absolute;
     left: 19rem;
     top: 27.3rem;
 
-    @include notebook{
+    @include notebook {
       top: 32.5rem;
       left: 33rem;
     }

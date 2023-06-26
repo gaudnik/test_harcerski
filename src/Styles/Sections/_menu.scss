@@ -2,6 +2,7 @@
   &__btn {
     display: none;
   }
+
   &__toggle {
     display: block;
     position: absolute;
@@ -13,6 +14,7 @@
     transition: .3s all ease-in-out;
     border-radius: 2px;
     cursor: pointer;
+
     @include notebook{
       right: 4rem;
     }
@@ -38,12 +40,13 @@
       bottom: -0.525rem;
     }
   }
+
   &__x {
     cursor: pointer;
   }
 
   &__toggle.open {
-    .menu__x{
+    .menu__x {
       position: relative;
       z-index: 4;
       background-image: url("../../Images/rectangle_mobile.svg");
@@ -52,7 +55,8 @@
       height: 35px;
       top: -18px;
       right: 8px;
-      @include notebook{
+
+      @include notebook {
         background-image: url("../../Images/rectangle.svg");
         height: 55px;
         width: 55px;
@@ -61,6 +65,7 @@
       }
     }
     background-color: transparent;
+
     &:before {
       z-index: 5;
       top: 0;
@@ -103,6 +108,7 @@
       color: $color_black;
       margin-top: 1.25rem;
       margin-bottom: 2rem;
+      
       @include notebook{
         margin-top: 3.75rem;
 

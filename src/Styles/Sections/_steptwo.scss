@@ -1,36 +1,44 @@
 .steptwo {
     @include section-mobile;
     @include section-notebook;
+
     &__btn {
         @include btn-settings;
     }
+
     &__header {
         @include second-header;
     }
+    
     &__step-number {
         @include step-number;
     }
+
     &__test-header {
         @include test-header;
     }
-    &__info{
+
+    &__info {
         text-align: center;
         margin-top: 3rem ;
         margin-bottom: 1rem;
         font-size: 0.875rem;
         font-weight: 600;
+
         @include notebook{
             text-align: start;
         }
     }
 
-    &__skillbox{
+    &__skillbox {
         display: flex;
         flex-direction: column;
     }
+
     &__input {
         @include inputs;
-        @include notebook{
+
+        @include notebook {
             width: 21.249rem;
         }
     }
@@ -43,10 +51,12 @@
         font-size: 1.2rem;
         font-weight: 500;
     }
-    &__error{
+
+    &__error {
         margin-bottom: 2rem;
         color: red;
         text-align: center;
+
         @include notebook {
             text-align: left;
         }
