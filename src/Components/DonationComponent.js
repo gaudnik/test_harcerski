@@ -24,7 +24,7 @@ const DonationComponent = () => {
       return;
     }
 
-    // Tutaj możesz umieścić kod obsługujący przekazanie datku, np. wysłanie żądania do serwera
+    //tutaj wysłanie żądania do serwera
     console.log(`Przekazano datek w wysokości: ${donationAmount} zł`);
     navigate(`/dziekujemyzawsparcie`);
 
