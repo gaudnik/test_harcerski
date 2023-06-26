@@ -1,6 +1,9 @@
 .invitetotest {
     @include section-mobile;
+    @include notebook {
+        margin-left: 13.875rem;
 
+    }
     &__header{
         @include second-header;
     }
@@ -62,6 +65,9 @@
         margin: 0 auto;
         height: 2.875rem;
         width: 5rem;
+        @include notebook{
+            margin: 0;
+        }
     
     }
     &__btn-send {
