@@ -14,6 +14,7 @@ import DonationComponent from './Components/DonationComponent';
 import AboutUs from './Components/AboutUs';
 import InviteToTest from './Components/InviteToTest';
 import ThanksForDonation from './Components/ThanksForDonation';
+import SentInvitations from './Components/SentInvitations';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path= "/dziekujemyzawsparcie" element={<ThanksForDonation/>}/>
         <Route path="/onas" element={<AboutUs/>}/>
         <Route path="/zaprosdotestu" element={<InviteToTest/>}/>
+        <Route path='/gotowe' element={<SentInvitations/>}/>
       </Routes>
     </div>
   </Router>  );
